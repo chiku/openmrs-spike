@@ -5,14 +5,13 @@ describe("Patients collection", function() {
   });
 
   it("finds a patient via ID", function() {
-    var attributes = {
+    var patient = new Application.Models.Patient({
       id: 50,
       name: "Foo",
       doctor_name: "Bar"
-    };
-    var patient = new Application.Models.Patient(attributes);
+    });
     var patients = new Application.Collections.Patients();
-    patients.add(attributes);
+    patients.add(patient);
 
     expect(patients.get(50).get("id")).toEqual(50);
     expect(patients.get(-1)).toBeUndefined();
@@ -25,18 +24,19 @@ describe("Patients collection", function() {
       doctor_name: "Doctor A"
     });
     var patientTwo = new Application.Models.Patient({
-      id: 1,
+      id: 2,
       name: "Abc Xyz",
       doctor_name: "Doctor B"
     });
     var patientThree = new Application.Models.Patient({
-      id: 1,
+      id: 3,
       name: "ABc",
       doctor_name: "Doctor C"
     });
     var patients = new Application.Collections.Patients();
     patients.add([patientOne, patientTwo, patientThree]);
 
+    expect(patients.length).toEqual(3);
     expect(patients.at(0)).toBe(patientThree);
     expect(patients.at(1)).toBe(patientTwo);
     expect(patients.at(2)).toBe(patientOne);

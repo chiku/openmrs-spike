@@ -7,9 +7,7 @@ Application.Collections.Patients = Backbone.Collection.extend({
     return response.patients;
   },
 
-  comparator: function(patient) {
-    return patient.get("name");
-  }
+  comparator: "name",
 });
 
 Application.collections.patients = new Application.Collections.Patients;

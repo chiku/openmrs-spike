@@ -12,10 +12,6 @@ ol li {
   clear: left;
 }
 
-.clear-both {
-  clear: both;
-}
-
 .error {
   color: #cc1122
 }
