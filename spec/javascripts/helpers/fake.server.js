@@ -34,6 +34,3 @@ var createFakeErrorServer = function() {
     stop: function() { fakeServer.restore(); }
   };
 }
-
-var createFakeServer = createFakeSuccessServer;
-

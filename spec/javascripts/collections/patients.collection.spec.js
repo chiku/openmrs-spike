@@ -44,7 +44,7 @@ describe("Patients collection", function() {
 
   describe("on fetching from server", function() {
     beforeEach(function() {
-      this.fakeServer = createFakeServer();
+      this.fakeServer = createFakeSuccessServer();
     });
 
     afterEach(function() {

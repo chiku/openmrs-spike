@@ -1,15 +1,17 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 gem "sinatra"
 gem "sinatra-contrib"
-gem "rake"
+
+group :development, :test do
+  gem "rake"
+end
 
 group :development do
   gem "juicer"
 end
 
 group :test do
-  gem "ffi",     "=1.0.9"
   gem "rspec"
   gem "jasmine", :require => false
 end

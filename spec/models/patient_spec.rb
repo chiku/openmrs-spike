@@ -6,15 +6,15 @@ describe Patient do
   end
 
   it "has a name" do
-    patient.name.should == "Patient Name 10"
+    expect(patient.name).to eq("Patient Name 10")
   end
 
   it "has a doctor" do
-    patient.doctor_name.should == "Doctor Name 10"
+    expect(patient.doctor_name).to eq("Doctor Name 10")
   end
 
   it "has an ID" do
-    patient.id.should == 10
+    expect(patient.id).to eq(10)
   end
 
   describe "JSON representation" do
@@ -24,32 +24,31 @@ describe Patient do
     end
 
     it "has a name" do
-      decoded_json['name'].should == patient.name
+      expect(decoded_json['name']).to eq(patient.name)
     end
 
     it "has a doctor" do
-      decoded_json['doctor_name'].should == patient.doctor_name
+      expect(decoded_json['doctor_name']).to eq(patient.doctor_name)
     end
 
     it "has an ID" do
-      decoded_json['id'].should == patient.id
+      expect(decoded_json['id']).to eq(patient.id)
     end
 
     it "has a sex" do
-      ['M', 'F'].should include(decoded_json['sex'])
+      expect(['M', 'F']).to include(decoded_json['sex'])
     end
 
     it "has an appointment time" do
-      decoded_json['appointment_time'].should_not be_empty
+      expect(decoded_json['appointment_time']).not_to be_empty
     end
   end
 
   it "can be found by ID" do
-    Patient.find(50).id.should == 50
+    expect(Patient.find(50).id).to eq(50)
   end
 
   it "can be listed" do
-    Patient.all.count.should == 3
+    expect(Patient.all.count).to eq(3)
   end
 end
-
