@@ -2,26 +2,16 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
   <title>
-    openMRS spike using backbone.js
+    OpenMRS spike using backbone.js
   </title>
-  <meta name="description" content="openMRS backbone.js spike">
+  <meta name="description" content="OpenMRS backbone.js spike">
   <meta name="author" content="Chirantan Mitra">
 
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-  <link rel="stylesheet" href="stylesheets/style.css">
-  <link rel="stylesheet" href="stylesheets/patients.css">
-
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+  <link rel="stylesheet" href="stylesheets/all.min.css">
 </head>
 
 <body>
@@ -34,25 +24,16 @@
   <footer>
   </footer>
 
-  <!-- JavaScript at the bottom for fast page loading -->
-  <script src="javascripts/lib/jquery-3.4.1.js"></script>
-  <script src="javascripts/lib/underscore.js"></script>
-  <script src="javascripts/lib/backbone.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="javascripts/lib/jquery-3.4.1.min.js"><\/script>')</script>
 
-  <!-- scripts concatenated and minified via build script -->
-  <script src="javascripts/boot/initialize.js"></script>
-  <script src="javascripts/config/urls.js"></script>
-  <script src="javascripts/config/selectors.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <script>window._ || document.write('<script src="javascripts/lib/underscore.min.js"><\/script>')</script>
 
-  <script src="javascripts/app/models/patient.js"></script>
-  <script src="javascripts/app/collections/patients.collection.js"></script>
-  <script src="javascripts/app/routers/patients.router.js"></script>
-  <script src="javascripts/app/views/patients.index.js"></script>
-  <script src="javascripts/app/views/patient.info.js"></script>
-  <script src="javascripts/app/views/patient.show.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
+  <script>window.Backbone || document.write('<script src="javascripts/lib/backbone-min.js"><\/script>')</script>
 
-  <script src="javascripts/boot/run.js"></script>
-  <!-- end scripts -->
+  <script src="javascripts/all.min.js"></script>
 
   <script type="text/template" id="template-patients">
     <h2>List of patients</h2>
