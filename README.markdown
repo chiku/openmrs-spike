@@ -70,3 +70,8 @@ Minify assets
 ``` shell
   rake minify
 ```
+
+
+License
+-------
+This repository is released under the MIT license. Please refer to LICENSE for more details.
