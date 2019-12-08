@@ -1,15 +1,13 @@
-/**
- * @depends boot/initialize.js
+//= require boot/initialize.js
 
- * @depends config/selectors.js
- * @depends config/urls.js
+//= require config/selectors.js
+//= require config/urls.js
 
- * @depends app/models/patient.js
- * @depends app/collections/patients.collection.js
- * @depends app/routers/patients.router.js
- * @depends app/views/patients.index.js
- * @depends app/views/patient.info.js
- * @depends app/views/patient.show.js
+//= require app/models/patient.js
+//= require app/collections/patients.collection.js
+//= require app/routers/patients.router.js
+//= require app/views/patients.index.js
+//= require app/views/patient.info.js
+//= require app/views/patient.show.js
 
- * @depends boot/run.js
- */
+//= require boot/run.js

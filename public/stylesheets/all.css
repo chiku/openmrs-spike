@@ -1,2 +1,2 @@
-@import url("style.css");
-@import url("patients.css");
+//= require style.css
+//= require patients.css
