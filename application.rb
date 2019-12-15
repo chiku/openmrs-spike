@@ -8,14 +8,12 @@ MODEL_FILES.each {|file| require file }
 
 module PatientsManagament
   class Application < Sinatra::Base
+    index_file = 'index.dev.html'
+
     configure :development, :test do
       register Sinatra::Reloader
       MODEL_FILES.each {|file| puts file }
       MODEL_FILES.each {|file| also_reload file }
-    end
-
-    index_file = 'index.html'
-    configure :production do
       index_file = 'index.min.html'
     end
 

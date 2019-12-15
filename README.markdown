@@ -21,13 +21,6 @@ Steps to get the application running
   bundle install
 ```
 
-* If you want to minify javascript and stylesheet files on your local box. This is a one-time step. See 'Minify assets' for more details. (Optional step)
-
-``` shell
-  juicer install yui_compressor
-  juicer install jslint
-```
-
 * Bring up the server in development mode
 
 ``` shell
